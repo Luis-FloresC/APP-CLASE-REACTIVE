@@ -1,8 +1,50 @@
+import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
-import Login from './src/componentes/login';
-export default function App() {
+
+export default function Login() {
   return (
-    <Login></Login>
+    <View style={styles.contenedor}>
+      <View style={styles.contenedorLogin}>
+        <View style={styles.contenedorTitulo}>
+          <Text style={styles.tituloLogin}>Menú Digital</Text>
+        </View>
+        <View style={[styles.contenedorControles, styles.sombraControles]}>
+          <View style={styles.controles}>
+            <TextInput
+              placeholder="Escriba el usuario o correo"
+              style={styles.entradas}
+            >
+            </TextInput>
+            <TextInput
+              placeholder="Escriba la contraseña"
+              style={styles.entradas}
+              passwordRules=""
+              secureTextEntry={true}
+            >
+            </TextInput>
+          </View>
+          <View style={styles.contenedorBotones}>
+            <View style={styles.boton}>
+              <Button title="Iniciar Sesión"
+              ></Button>
+            </View>
+          </View>
+          <View style={styles.contenedorBotonesRedes}>
+            <View style={styles.botonRedes}>
+              <Button
+                title="Inicio"
+              ></Button>
+            </View>
+            <View style={styles.botonRedes}>
+              <Button
+                title="Google" color={"#dc3545"}
+              >
+              </Button>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
   );
 }
 
